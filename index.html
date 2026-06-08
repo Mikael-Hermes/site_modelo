@@ -4,11 +4,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional Webpage</title>
+    <title>Modelo</title>
 
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="box.css">
+    <link rel="stylesheet" href="dbg.css">
 
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     
@@ -16,20 +16,92 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="dbgbox"></div>
+    
+    <!-- Barra superior de navegação -->
+
+    <nav class="navbar navbar-expand-lg bg-success sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/SALTY_15agosto24_LG_WALTER_ABREU_TXT_OK-02.png" alt="Bosque da Esperança" width="128" height="41">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
-            <div class="col">
-                hi
+        </div>
+    </nav>
+    
+
+    <!-- Carousel -->
+
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="site_clonado/Bosque da Esperança -_files/BannerSite_3.png.webp" 
+                width="200" height="400" class="d-block w-100" alt="...">
             </div>
-            <div class="col">
-                hi
+            
+            <div class="carousel-item">
+                <img src="site_clonado/Bosque da Esperança -_files/BannerSite_4-1.png.webp" 
+                width="200" height="400" class="d-block w-100" alt="...">
+            
+            </div>
+                <div class="carousel-item">
+                <img src="site_clonado/Bosque da Esperança -_files/BOSQUE-POSTS-CAMPANHA-DIA-DAS-MAES-26-22-1-1.png.webp" 
+                width="200" height="400" class="d-block w-100" alt="...">
             </div>
         </div>
 
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    
+
+    <div class="container-fluid text-center text-bg-success pt-2 pb-2">
+        insert text here
+    </div>
+    <div>
+        
+    </div>
+        
 </body>
 </html>

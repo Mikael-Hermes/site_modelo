@@ -1,0 +1,29 @@
+
+
+.redbox {
+    background-color: lightcoral;
+    border: 1px solid red;
+    min-height: 10px;
+}
+
+.bluebox {
+    background-color: lightblue;
+    border: 1px solid blue;
+    min-height: 10px;
+}
+
+.yellowbox {
+    background-color: lightyellow;
+    border: 1px solid yellow;
+    min-height: 10px;
+}
+
+.greenbox {
+    background-color: lightgreen;
+    border: 1px solid green;
+    min-height: 10px;
+}
+
+.boundary {
+    border: 1px solid black;
+}
