@@ -131,8 +131,33 @@
   border-color: #fff;
 }
 
+.btn-border-green {
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+
+  color: #377619;
+  background-color: #fff;
+  border-color: #377619;
+}
+
+
+.btn-border-green:hover {
+  transform: translateY(-6px);
+}
+
+.btn-border-green:hover {
+  color: #377619;
+  background-color: #fff;
+  border-color: #377619;
+}
+
+
+
 .text-green {
   color: #377619;
+}
+
+.text-highlight {
+  color: #96B433;
 }
 
 .text-gray {
@@ -147,4 +172,32 @@
 .dropdown-item:focus {
     background-color: #96B433 !important;
     color: #ffffff !important;
+}
+
+.arvore{
+  background-image: url('assets/Design-sem-nome-6-1.png');
+  background-size: cover;       
+  background-position: top center;  
+  background-repeat: no-repeat; 
+  min-height: 650px;  
+}
+
+.collapse_into_bg_container {
+  background: transparent;
+
+}
+
+.text-small {
+  font-size: small;
+}
+
+@media (max-width: 992px) {
+  .arvore {
+    background-position: top left;
+  }
+
+  .collapse_into_bg_container {
+    background: #000000B3;
+    color: white;
+  }
 }
