@@ -1,5 +1,150 @@
+@font-face {
+  font-family: 'eicons';
+  src: url('/assets/fonts/eicons.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'brands';
+  src: url('/assets/fonts/fa-brands-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'regular';
+  src: url('/assets/fonts/fa-regular-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'solid';
+  src: url('/assets/fonts/fa-solid-900.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 .fixed_size_card_image {
   height: 350px;        /* fixed height you want */
   object-fit: cover;    /* crops instead of squishing */
   object-position: center; /* which part to keep (default) */
+}
+
+.tema_verde {
+  background-color: #377619;
+}
+
+.tema_verde2 {
+  background-color: #377619;
+}
+
+.tema_agenda {
+  background-color: #147F40;
+}
+
+.cor_footer2 {
+  background-color: #2A5C13;
+}
+
+.cor_footer1 {
+  background-color: #377619;
+}
+
+.highlight {
+  color: #96B433;
+}
+
+.banner1 {
+  background-color: #96B433;
+}
+
+.banner2 {
+  background-color: #61CE70;
+}
+
+.banner3 {
+  background-color: #377619;
+}
+
+.orange_text {
+  color: #FF6504;
+}
+
+.btn-green {
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+
+  color: #fff;
+  background-color: #377619;
+  border-color: #377619;
+}
+
+.btn-green:hover {
+  transform: translateY(-6px);
+}
+
+.btn-green:hover {
+  color: #fff;
+  background-color: #377619;
+  border-color: #377619;
+}
+
+
+.btn-orange {
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+
+  color: #fff;
+  background-color: #FF6504;
+  border-color: #FF6504;
+}
+
+.btn-orange:hover {
+  transform: translateY(-6px);
+}
+
+.btn-orange:hover {
+  color: #fff;
+  background-color: #FF6504;
+  border-color: #FF6504;
+}
+
+.btn-white {
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+
+  color: #377619;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.btn-white:hover {
+  transform: translateY(-6px);
+}
+
+.btn-white:hover {
+  color: #377619;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.text-green {
+  color: #377619;
+}
+
+.text-gray {
+  color: #A6A8BC;
+}
+
+.fonts {
+  font-family: sans-serif, Arial, Helvetica;
+}
+
+.dropdown-item:hover, 
+.dropdown-item:focus {
+    background-color: #96B433 !important;
+    color: #ffffff !important;
 }
