@@ -29,7 +29,13 @@
   font-style: normal;
   font-display: swap;
 }
-
+ /*
+ exemplor de como usar variaveis no css
+:root{
+  /*variaveis de cor padrão, assim quando mudamos a veriavel, ele muda todos os respectivos idem com ela de forma automatica
+--verdeesperançaescuro :green;
+}
+*/
 .fixed_size_card_image {
   height: 450px;        /* fixed height you want */
   object-fit: cover;    /* crops instead of squishing */
@@ -50,6 +56,7 @@
 
 .cor_footer2 {
   background-color: #2A5C13;
+  color: var(--verdeesperança);
 }
 
 .cor_footer1 {
