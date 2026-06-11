@@ -31,7 +31,7 @@
 }
 
 .fixed_size_card_image {
-  height: 350px;        /* fixed height you want */
+  height: 450px;        /* fixed height you want */
   object-fit: cover;    /* crops instead of squishing */
   object-position: center; /* which part to keep (default) */
 }
@@ -189,6 +189,10 @@
 
 .text-small {
   font-size: small;
+}
+
+.text-tiny {
+  font-size: 0.7rem;
 }
 
 @media (max-width: 992px) {
