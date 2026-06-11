@@ -18,10 +18,13 @@
 
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body class="fonts">
+<body class="fonts" id="pageBody">
     
     <!-- Barra superior de navegação -->
 
+    <div id="insert-navbar"></div>
+
+    <template id="navbar-template">
     <nav class="navbar navbar-expand-lg tema_verde sticky-top">
         <div class="container-fluid justify-content-between">
 
@@ -71,7 +74,8 @@
             </ul>
             </div>
         </div>
-        </nav>
+    </nav>
+    </template>
     
 
     <!-- Carousel -->
@@ -247,7 +251,19 @@
         <!-- cards dos eventos -->
 
         <div class="d-md-flex justify-content-center mb-5 g-0 gy-5 mx-lg-5 mx-0 d-none" id="event-container">      
+            <template id="card-eventos">
+            <div class="card rounded-5 mx-3" style="width: 30%; aspect-ratio: 1750 / 3000;">
+                <img src="${img_src}" 
+                class="card-img-top fixed_size_card_image rounded-top-5" alt="...">
 
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-green"><b>${title}</b> </h5>
+                    <p class="card-text text-gray text-small" text-small>${msg}</p>
+                    <a href="${link}" class="card-link orange_text text-tiny mt-auto">SAIBA MAIS</a>
+                </div>
+                <div class="card-footer bg-transparent text-gray text-tiny text-center">${date}</div>
+            </div>
+            </template>
         </div>
 
         <!-- carrosel eventos -->
@@ -255,14 +271,15 @@
     <div id="carouselEventos" class="carousel slide d-md-none d-md-block">
         <div class="carousel-inner" id="event-carousel">
             
+
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselEventos" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <button class="carousel-control-prev " type="button" data-bs-target="#carouselEventos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon text-black" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselEventos" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon text-black" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
@@ -448,8 +465,8 @@
     <section class="mt-5 mb-5">
     
     <div class="container">
-        <div class="row">
-            <div class="col">
+        <div class="row gy-5">
+            <div class="col-12 col-lg">
                 <h1 class="text-green">
                     Onde <span class="text-highlight">estamos:</span>
                 </h1>
@@ -463,16 +480,17 @@
                 <a href="#" class="text-gray">Ir agora >></a>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card" style="border-color: var(--verdeesperançaescuro);">
                     <div class="card-title p-2 tema_verde text-white m-0">Bosque da Esperança</div>
                     <div class="card-body p-0">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5010.6253
                         29447398!2d-43.950091140853075!3d-19.809141776280555!3m2!1i1024!2i768!4f13.
                         1!3m3!1m2!1s0xa699664e36269d%3A0x6de7a8c170b23b3e!2sBosque%20da%20Esperan%C3
                         %A7a%20Cemit%C3%A9rio%20e%20Cremat%C3%B3rio!5e0!3m2!1spt-BR!2sbr!4v1781197474822!5m2!1spt-BR!2sbr" 
-                        width="600" height="450" style="border:0;" allowfullscreen="" 
-                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        style="border:0; aspect-ratio: 4/3; width: 100%;" allowfullscreen="" 
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="p-0"></iframe>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -483,6 +501,9 @@
     
     <!-- Rodapé -->
 
+    <div id="insert-footer"></div>
+
+    <template id="footer-template">
     <footer class="cor_footer1 text-white">
         <div class="container-fluid pt-3">
             <div class="row px-3">
@@ -527,6 +548,7 @@
         </div>
 
     </footer>
+    </template>
 
 
 </body>

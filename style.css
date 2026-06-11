@@ -1,8 +1,10 @@
-
 :root{
 --verdeesperançaescuro: green;
 }
 
+#pageBody {
+  display: none;
+}
 
 @font-face {
   font-family: 'eicons';
