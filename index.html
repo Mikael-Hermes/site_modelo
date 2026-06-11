@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="dbg.css">
 
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="scripts.js"></script>
 
 
 
@@ -75,10 +76,10 @@
 
     <!-- Carousel -->
 
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+    <div id="carouselStart" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselStartIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselStartIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -93,11 +94,11 @@
             </div>
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselStart" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselStart" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
@@ -238,60 +239,33 @@
 
     <!-- eventos -->
 
-    <div class="container-fluid mt-5 px-5 py-5 bluebox">
-        <div class="row mb-5">
-            <div class="col">
-                <h1 class="text-green"><b>Eventos</b></h1>
-            </div>
+    <div class="container-fluid mt-5 px-lg-5 px-0 py-5">
+        <div class="d-flex justify-content-start mb-5 g-0 gy-5 mx-lg-5 mx-0">
+                <h1 class="text-green ms-3"><b>Eventos</b></h1>
         </div>
 
         <!-- cards dos eventos -->
 
-        <div class="d-flex justify-content-center mb-5 g-0 gy-5 mx-5 yellowbox">
-                <div class="card rounded-5 mx-3" style="width: 30%; aspect-ratio: 1440 / 3037;" id="hi">
-                    <img src="assets/BOSQUE-POSTS-CAMPANHA-DIA-DAS-MAES-26-22-1-1.png" class="card-img-top fixed_size_card_image rounded-top-5" alt="...">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-green"><b>BOSQUE – DIA DAS MÃES</b> </h5>
-                        <p class="card-text text-gray" text-small>O Bosque da Esperança convida você e sua família para a programação especial de Dia das Mães, com um momento</p>
-                        <a href="#" class="card-link orange_text text-small mt-auto">SAIBA MAIS</a>
-                    </div>
-                    <div class="card-footer bg-transparent text-gray text-small text-center">27 de abril de 2026 ⋅ 15:31</div>
-                </div>
-
-                
-                <div class="card rounded-5 mx-3" style="width: 30%; aspect-ratio: 1440 / 3037;">
-                    <img src="assets/BannerSite_4-1.png" class="card-img-top fixed_size_card_image rounded-top-5" alt="...">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-green"><b>Missa de Páscoa</b></h5>
-                        <p class="card-text text-gray">Neste tempo em que a saudade encontra a esperança, o Bosque da Esperança Cemitério e Crematório convida você e sua</p>
-                        <a href="#" class="card-link orange_text text-small mt-auto">SAIBA MAIS</a>
-                    </div>
-                    <div class="card-footer bg-transparent text-gray text-small text-center">8 de abril de 2026 ⋅ 16:05</div>
-                </div>
-
-
-                
-                <div class="card rounded-5 mx-3" style="width: 30%; aspect-ratio: 1440 / 3037;">
-                    <img src="assets/BannerSite_3.png" class="card-img-top fixed_size_card_image rounded-top-5" alt="...">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-green"><b>Calendário de Missas 2026</b></h5>
-                        <p class="card-text text-gray">Prezamos pelo acolhimento e organização em nossos eventos, por isso, informamos que o nosso calendário de missas para 2026 foi</p>
-                        <a href="#" class="card-link orange_text text-small mt-auto">SAIBA MAIS</a>
-                    </div>
-                    <div class="card-footer bg-transparent text-gray text-small text-center">5 de janeiro de 2026 ⋅ 14:16</div>
-                </div>
+        <div class="d-md-flex justify-content-center mb-5 g-0 gy-5 mx-lg-5 mx-0 d-none" id="event-container">      
 
         </div>
 
-        <script>
-            const element = document.getElementById('hi');
-            const styles = window.getComputedStyle(element);
-            const width = styles.getPropertyValue('width');
-            const height = styles.getPropertyValue('height');
-            console.log(width);
-            console.log("X");
-            console.log(height);
-        </script>
+        <!-- carrosel eventos -->
+
+    <div id="carouselEventos" class="carousel slide d-md-none d-md-block">
+        <div class="carousel-inner" id="event-carousel">
+            
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselEventos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselEventos" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
         <!-- botão para pagina do evento -->
 
@@ -304,6 +278,7 @@
         </div>
 
     </div>
+
 
    
 
