@@ -94,6 +94,7 @@ footer_template = `<footer class="cor_footer1 text-white">
         </div>
     </footer>`
 
+
 function createEventCardCarousel(html){
     card = html.querySelector(".card")
     card.style.width = "100%"
@@ -121,9 +122,7 @@ function createEventCardCarousel(html){
         item.append(container)
 
         
-        carousel.append(item)
-        console.log(carousel)
-        
+        carousel.append(item)        
     }
     
 
@@ -157,6 +156,34 @@ function createEventCard(title, msg, link, date, img_src){
 }
 
 
+function addDepoimento(msg1, author1, date1, msg2 = null, author2 = null, date2 = null){
+    template = document.getElementById("Depoimentos-template")
+    depo = template.content.cloneNode(true)
+
+
+
+    depo.getElementById("depoMsg1").textContent = msg1
+    depo.getElementById("depoAuthor1").textContent = author1
+    depo.getElementById("depoDate1").textContent = date1
+
+    if(msg2 != null && author2 != null && date1 != null){
+        depo.getElementById("depoMsg2").textContent = msg2
+        depo.getElementById("depoAuthor2").textContent = author2
+        depo.getElementById("depoDate2").textContent = date2
+    } else{
+        depo.getElementById("depo2").classList.add("d-none")
+    }
+    const carousel = document.getElementById("inner-carouselDepoimentos")
+
+    if(!carousel.querySelector(".active")){
+        depo.querySelector(".carousel-item").classList.add("active")
+    } 
+    carousel.append(depo)
+
+}
+
+
+
 function addFooter() {
     const element = document.getElementById("insert-footer")
     element.insertAdjacentHTML("afterbegin", footer_template)
@@ -170,36 +197,74 @@ function addNavbar() {
 function displayPage(){
     const body = document.getElementById("pageBody")
     body.style.display = "block"
+
+    const pos = sessionStorage.getItem('scrollPos');
+    if (pos !== null) {
+        window.scrollTo(0, parseInt(pos, 10));
+    }
 }
 
-addNavbar()
 
-createEventCard(
-    "BOSQUE – DIA DAS MÃES", 
-    "O Bosque da Esperança convida você e sua família para a programação especial de Dia das Mães, com um momento",
-    "#",
-    "27 de abril de 2026 ⋅ 15:31",
-    "assets/BOSQUE-POSTS-CAMPANHA-DIA-DAS-MAES-26-22-1-1.png"
-)
+function initialize(){
+    history.scrollRestoration = 'manual';
 
-createEventCard(
-    "Missa de Páscoa", 
-    "Neste tempo em que a saudade encontra a esperança, o Bosque da Esperança Cemitério e Crematório convida você e sua",
-    "#",
-    "8 de abril de 2026 ⋅ 16:05",
-    "assets/BannerSite_4-1.png"
-)
+    window.addEventListener('beforeunload', () => {
+        sessionStorage.setItem('scrollPos', window.scrollY);
+    });
 
-createEventCard(
-    "Calendário de Missas 2026", 
-    "Prezamos pelo acolhimento e organização em nossos eventos, por isso, informamos que o nosso calendário de missas para 2026 foi",
-    "#",
-    "5 de janeiro de 2026 ⋅ 14:16",
-    "assets/BannerSite_3.png"
-)
+    addNavbar()
+
+    createEventCard(
+        "BOSQUE – DIA DAS MÃES", 
+        "O Bosque da Esperança convida você e sua família para a programação especial de Dia das Mães, com um momento",
+        "#",
+        "27 de abril de 2026 ⋅ 15:31",
+        "assets/BOSQUE-POSTS-CAMPANHA-DIA-DAS-MAES-26-22-1-1.png"
+    )
+
+    createEventCard(
+        "Missa de Páscoa", 
+        "Neste tempo em que a saudade encontra a esperança, o Bosque da Esperança Cemitério e Crematório convida você e sua",
+        "#",
+        "8 de abril de 2026 ⋅ 16:05",
+        "assets/BannerSite_4-1.png"
+    )
+
+    createEventCard(
+        "Calendário de Missas 2026", 
+        "Prezamos pelo acolhimento e organização em nossos eventos, por isso, informamos que o nosso calendário de missas para 2026 foi",
+        "#",
+        "5 de janeiro de 2026 ⋅ 14:16",
+        "assets/BannerSite_3.png"
+    )
+
+    addDepoimento(`Realizei, ontem, a difícil tarefa de enterrar um ente querido; mas, 
+        aí da assim, tivemos a grata satisfação de observar um ambiente acolhedor, de 
+        pessoas extremamente empenhadas em proporcionar o melhor tratamento possível, 
+        tanto a administração quanto no velório; vocês estão de parabéns é contagiante 
+        o profissionalismo.`, "Antonio Cota", "Agosto de 2018",
+         
+        `Mensagem: Boa noite, só gostaria de agradecer e parabenizar os funcionários do 
+        cemitério pela delicadeza e atenção no trabalho. Minha avó foi sepultada ontem, 
+        a funcionária Natália nos acolheu muito bem. O momento final em que o rapaz tocou 
+        a música no violoncelo foi muito especial. Não tivemos a oportunidade de agradecê-los 
+        ontem, então fica por aqui. Muito obrigada.`, "Natália Rosa", "Agosto de 2018")
+        
+    addDepoimento(`Gostaria de parabenizar a equipe do Bosque da Esperança pelo cuidado com os 
+        entes queridos dos que estão sepultados no cemitério, no dia de finados. Foram detalhistas 
+        nos cuidados para confortar os corações dos que tem saudades dos que partiram. Gratidão!`, 
+        "Rosalia Marques", "Novembro de 2021",
+
+        `Esclareci todas as minhas duvidas pelo chat , e cheguei a conclusão de que é muito 
+        importante ter um jazigo, o representante me mostrou o melhor custo beneficio pra mim 
+        e minha família. Comprei um jazigo para uso futuro e o melhor que fiz tudo pelo chat
+        mesmo não precisei ir a empresa.`, "Bruno Amorin", "Janeiro de 2017")
 
 
-addFooter()
+    addFooter()
 
+    displayPage()
 
-displayPage()
+}
+
+initialize()
